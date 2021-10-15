@@ -31,7 +31,7 @@ services:
     ports:
       - '5432:5432'
 
-  pgadmin:
+  pgadmin4:
     image: dpage/pgadmin4
     container_name: pgadmin4
     restart: always
@@ -56,4 +56,4 @@ services:
       - ./django-backend/staticfiles:/static
     depends_on:
       - backend
-      - pgadmin
+      - pgadmin4
